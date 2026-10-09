@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import NavLinks from './NavLinks';
 import Link from 'next/link';
+import Marquee from './Marquee';
 
 const Header = () => {
     const date = new Date().toLocaleDateString("bn-BD",{dateStyle: 'full'})
     
     return (
         <header className='mb-5 mt-3'>
-      <div className=' container mx-auto  flex justify-between my-4 '>
+      <div className=' container mx-auto  flex justify-between my-2 '>
         <div className='flex items-center gap-2'>
           <Image className='p-2 bg-[#05893E] border rounded-2xl' height={50} width={50} src={"/logo-icon.png"} alt='Logo' />
           <div>
@@ -21,7 +22,8 @@ const Header = () => {
         </div>
       </div>
 
-      <NavLinks />
+      <NavLinks/>
+      <Marquee/>
 
     </header>
     );
