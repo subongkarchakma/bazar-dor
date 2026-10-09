@@ -7,9 +7,9 @@ const Marquee = async () => {
     const data = await res.json()
     console.log(data);
     return (
-        <div>
+        <div className="border-purple-500 border-y-2">
             <MarqueeText direction="right" duration={15}>
-                {data.map(headline => <div key={headline.id}>
+                {data.map(headline => <div className="py-3" key={headline.id}>
                     <span>{headline.image}</span>
                     <span>{headline.nameBn}</span>
                     <span>{`${headline.today} টাকা/কেজি`}</span>
