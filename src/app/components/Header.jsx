@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import React from 'react';
 import NavLinks from './NavLinks';
+import Link from 'next/link';
 
 const Header = () => {
     const date = new Date().toLocaleDateString("bn-BD",{dateStyle: 'full'})
@@ -11,7 +11,7 @@ const Header = () => {
         <div className='flex items-center gap-2'>
           <Image className='p-2 bg-[#05893E] border rounded-2xl' height={50} width={50} src={"/logo-icon.png"} alt='Logo' />
           <div>
-            <h2 className='font-bold text-2xl'>বাজার দর</h2>
+            <Link href={'/'}><h2 className='font-bold text-2xl'>বাজার দর</h2></Link>
             <p className='font-semi-bold'>{date}</p>
           </div>
         </div>
@@ -21,7 +21,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* <NavLinks /> */}
+      <NavLinks />
 
     </header>
     );
