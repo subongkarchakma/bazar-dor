@@ -8,7 +8,7 @@ const NavLinks = async () => {
         <div className='border-gray-100 border-y-2'>
 
             <div className='container mx-auto flex gap-7 py-4  '>
-            {data.map(nav => <Link className='flex gap-2' key={nav.id} href={nav.slug}>
+            {data.map(nav => <Link className='flex gap-2' key={nav.id} href={`/category/${nav?.slug}`}>
             <span>{nav.icon}</span>
             {nav.nameBn}</Link> )}
         </div>
