@@ -5,7 +5,7 @@ import { BiSolidUpArrow } from "react-icons/bi";
 import { IoCaretDownSharp } from "react-icons/io5";
 
 const getProducts = async () => {
-  const res = await fetch("https://api.api-store.workers.dev/api/bazardor/products");
+  const res = await fetch("https://openapi.programming-hero.com/api/bazardor/products");
   const data = await res.json();
   return data;
 }

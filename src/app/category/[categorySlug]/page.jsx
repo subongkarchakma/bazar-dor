@@ -1,16 +1,17 @@
 
-import ProductCard from '@/app/components/ProductCard';
+// import ProductCard from '@/app/components/ProductCard';
+import ProductCard from '../../components/ProductCard';
 import Link from 'next/link';
 import React from 'react';
 import { MdOutlineArrowForwardIos } from 'react-icons/md';
 
 const getCategoryProducts = async (categorySlug) => {
-    const res = await fetch(`https://api.api-store.workers.dev/api/bazardor/products?category=${categorySlug}`)
+    const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/products?category=${categorySlug}`)
     const data = await res.json();
     return data
 };
 const getCategories = async () => {
-    const res = await fetch("https://api.api-store.workers.dev/api/bazardor/categories");
+    const res = await fetch("https://openapi.programming-hero.com/api/bazardor/categories");
     const data = await res.json();
     return data;
 }
@@ -57,7 +58,7 @@ const CategoryProducts = async ({ params }) => {
 
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
-                   categoryProducts.map(product => <ProductCard key={product.id} product={product} ></ProductCard>) 
+                    categoryProducts.map(product => <ProductCard key={product.id} product={product} ></ProductCard>)
                 }
             </div>
         </div>
