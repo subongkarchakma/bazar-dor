@@ -8,8 +8,8 @@ const Header = () => {
     
     return (
         <header className='mb-5 mt-3'>
-      <div className=' container mx-auto  flex justify-between my-2 '>
-        <div className='flex items-center gap-2'>
+      <div className=' container mx-auto flex justify-between my-2 '>
+        <div className='flex items-center gap-1'>
           <Image className='p-2 border rounded-2xl' height={70} width={60} src={"/logo-icon.png"} alt='Logo' />
           <div>
             <Link href={'/'}><h2 className='font-bold text-2xl'>বাজার দর</h2></Link>
