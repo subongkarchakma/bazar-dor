@@ -85,7 +85,7 @@ const SignInPage = () => {
                     <div className='flex justify-center gap-2'>
                         <p>অ্যাকাউন্ট নেই? </p>
 
-                        <Link href={'/signup'}>
+                        <Link href={'/sign-up'}>
                             <button className='text-green-600'>
                                 সাইন আপ করুন
                             </button>
