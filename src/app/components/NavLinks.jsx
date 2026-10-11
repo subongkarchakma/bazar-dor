@@ -1,20 +1,16 @@
-import Link from 'next/link';
-
+import CategoryLink from "./CategoryLink";
 
 const NavLinks = async () => {
-    const res = await fetch("https://openapi.programming-hero.com/api/bazardor/categories");
-    const data = await res.json();
-    return (
-        <div className='border-gray-100 border-y-2'>
+const res = await fetch(
+"https://openapi.programming-hero.com/api/bazardor/categories"
+);
 
-            <div className='container mx-auto flex gap-7 py-4  '>
-                {data.map(nav => <Link className='flex gap-2' key={nav.id} href={`/category/${nav?.slug}`}>
-                    <span>{nav.icon}</span>
-                    {nav.nameBn}</Link>)}
-            </div>
+const data = await res.json();
 
-        </div>
-    );
+return ( <div className="border-y-2 border-gray-100"> <div className="container mx-auto flex gap-4 overflow-x-auto py-4">
+{data.map((nav) => ( <CategoryLink key={nav.id} nav={nav} />
+))} </div> </div>
+);
 };
 
 export default NavLinks;

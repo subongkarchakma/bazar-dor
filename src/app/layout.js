@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import { ToastContainer } from "react-toastify";
 import Footer from "./components/Footer";
+import Marquee from "./components/Marquee";
 
 
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Header/>
+        <Marquee/>
         {children}
         <Footer/>
         <ToastContainer />
